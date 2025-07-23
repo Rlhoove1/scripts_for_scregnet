@@ -95,11 +95,11 @@ for querycolor in [(123,175,65),(201,149,43),(243,118,110),(31,189,194),(166,129
 cmap1 = dict(zip(['G1/other', 'Neural G0', 'G1', 'Late G1', 'S', 'S/G2', 'G2/M', 'M/Early G1'],result))
 
 # Plot stream lines
-scv.pl.velocity_embedding_stream(adata, basis='X_umap', color=['ccAF'], save='/files/output/adata_velocity_stream_umap_9_7.png', dpi=300, palette = cmap1, title='', legend_loc='right margin', figsize=(3,3), size=70)
+scv.pl.velocity_embedding_stream(adata, basis='X_umap', color=['ccAF'], save='/files/output/adata_velocity_stream_umap_july_23.png', dpi=300, palette = cmap1, title='', legend_loc='right margin', figsize=(3,3), size=70)
 
 
 #get velocity_pca for cellpath to use later 
-scv.pl.velocity_embedding_stream(adata, basis='X_pca', color=['ccAF'], save='/files/output/adata_velocity_stream_pca_9_7.png', dpi=300, palette = cmap1, title='', legend_loc='right margin', figsize=(3,3), size=70)
+scv.pl.velocity_embedding_stream(adata, basis='X_pca', color=['ccAF'], save='/files/output/adata_velocity_stream_pca_july_23.png', dpi=300, palette = cmap1, title='', legend_loc='right margin', figsize=(3,3), size=70)
 
 keepers = adata.var.index[pd.DataFrame(adata.layers['velocity']).T.dropna().index]
 adata2 = adata[:,keepers]

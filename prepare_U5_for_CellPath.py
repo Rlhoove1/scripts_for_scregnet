@@ -1,6 +1,6 @@
 
 ```
-docker run -it -v /home/rlhoove1/U5:/files cplaisier/scrna_seq_velocity
+docker run -it -v /media/old_home/home/rlhoove1/U5:/files cplaisier/scrna_seq_velocity
 
 pip3 install --upgrade pip
 pip3 install --upgrade scvelo
